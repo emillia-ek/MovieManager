@@ -25,8 +25,8 @@ namespace MovieApp.Controllers
         }
 
         [HttpGet]
-        [Route("{id:guid}")]
-        public IActionResult GetMovieById(Guid id)
+        [Route("{id:int}")]
+        public IActionResult GetMovieById(int id)
         {
             var movie = dbContext.Movies.Find(id);
             if(movie is null){
@@ -52,13 +52,13 @@ namespace MovieApp.Controllers
 
         }
         [HttpPut]
-        [Route("{id:guid}")]
-        public IActionResult UpdateMovie(Guid id, UpdateMovieDto updateMovieDto)
+        [Route("{id:int}")]
+        public IActionResult UpdateMovie(int id, UpdateMovieDto updateMovieDto)
         {
             var movie = dbContext.Movies.Find(id);
             if(movie is null)
             {
-                return notFound();
+                return NotFound();
             }
 
             movie.Title = updateMovieDto.Title;
@@ -70,13 +70,13 @@ namespace MovieApp.Controllers
         }
 
         [HttpDelete]
-        [Route("{id:guid}")]
-        public IActionResult DeleteMovie(Guids id)
+        [Route("{id:int}")]
+        public IActionResult DeleteMovie(int id)
         {
             var movie = dbContext.Movies.Find(id);
             if(movie is null)
             {
-                return notFound();
+                return NotFound();
             }
             
             dbContext.Movies.Remove(movie);

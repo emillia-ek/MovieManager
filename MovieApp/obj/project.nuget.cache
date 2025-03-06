@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nP8YLY6NmQk=",
+  "dgSpecHash": "NAJE3MPxUZo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp-main\\MovieApp\\MovieApp.csproj",
+  "projectFilePath": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\MovieApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emili\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\emili\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
