@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MovieApp.Models;
+using MovieApp.Models.Entities;
 
 namespace MovieApp.Data
 {
