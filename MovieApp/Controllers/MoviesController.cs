@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MovieApp.Data;
 using MovieApp.Models;
@@ -23,6 +24,17 @@ namespace MovieApp.Controllers
             return Ok(dbContext.Movies.ToList());
         }
 
+        [HttpGet]
+        [Route("{id:guid}")]
+        public IActionResult GetMovieById(Guid id)
+        {
+            var movie = dbContext.Movies.Find(id);
+            if(movie is null){
+                return NotFound();
+            }
+            return Ok(movie);
+        }
+
         [HttpPost]
         public IActionResult AddMovie(AddMovieDto addMovieDto)
         {
@@ -38,6 +50,38 @@ namespace MovieApp.Controllers
 
             return Ok(movieEntity);
 
+        }
+        [HttpPut]
+        [Route("{id:guid}")]
+        public IActionResult UpdateMovie(Guid id, UpdateMovieDto updateMovieDto)
+        {
+            var movie = dbContext.Movies.Find(id);
+            if(movie is null)
+            {
+                return notFound();
+            }
+
+            movie.Title = updateMovieDto.Title;
+            movie.Director = updateMovieDto.Director;
+            movie.Year = updateMovieDto.Year;
+            
+            dbContext.SaveChanges();
+            return Ok(movie);
+        }
+
+        [HttpDelete]
+        [Route("{id:guid}")]
+        public IActionResult DeleteMovie(Guids id)
+        {
+            var movie = dbContext.Movies.Find(id);
+            if(movie is null)
+            {
+                return notFound();
+            }
+            
+            dbContext.Movies.Remove(movie);
+            dbContext.SaveChanges();
+            return Ok();
         }
     }
 }
