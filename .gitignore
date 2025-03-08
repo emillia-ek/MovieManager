@@ -21,3 +21,6 @@ obj/
 # Pliki logów i tymczasowe
 logs/
 *.log
+/MovieApp/.vs
+/MovieApp/obj
+/MovieApp/bin
