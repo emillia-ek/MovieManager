@@ -1,0 +1,27 @@
+import { fileURLToPath, URL } from 'node:url'
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueDevTools from 'vite-plugin-vue-devtools'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+    vueDevTools(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    },
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://localhost:7108',  // The URL of your ASP.NET Core backend
+        changeOrigin: true,               // This is important for handling virtual hosts
+        secure: false,                    // Use false if you are using HTTP instead of HTTPS
+      },
+    },
+  },
+})

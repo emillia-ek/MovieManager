@@ -1,0 +1,32 @@
+# Pliki binarne i build
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.appx
+*.appxbundle
+*.msix
+*.msixbundle
+*.publish/
+*.vs/
+
+# Konfiguracja środowiska
+.vscode/
+*.user
+*.suo
+*.cache
+*.csproj.user
+
+# Pliki logów i tymczasowe
+logs/
+*.log
+/MovieApp/.vs
+/MovieApp/obj
+/MovieApp/bin
+/MovieApp/.vs
+/MovieApp/.vs
+/MovieApp/.vs
+frontend-movie-app/package-lock.json
+MovieApp/appsettings.json
+MovieApp/appsettings.Development.json
