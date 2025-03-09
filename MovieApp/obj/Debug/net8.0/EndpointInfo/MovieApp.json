@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Movies/fetch": {
+      "post": {
+        "tags": [
+          "Movies"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Movies": {
       "get": {
         "tags": [

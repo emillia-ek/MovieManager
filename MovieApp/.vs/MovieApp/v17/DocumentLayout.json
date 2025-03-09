@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\models\\addmoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:models\\addmoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Migrations\\20250306175301_NowaMigracja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250306175301_NowaMigracja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Services\\MovieService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\MovieService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\migrations\\20250306180504_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:migrations\\20250306180504_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Migrations\\20250306175301_NowaMigracja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250306175301_NowaMigracja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\movieapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -23,16 +35,12 @@
       "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\models\\addmoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:models\\addmoviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\models\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:models\\entities\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\migrations\\20250306180504_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|solutionrelative:migrations\\20250306180504_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9030CA03-12BF-42F4-A682-8F2DCB3FD8C4}|MovieApp.csproj|c:\\users\\emili\\onedrive\\pulpit\\moviesapp\\movieapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -50,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,30 +67,82 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "20250306180504_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Migrations\\20250306180504_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250306180504_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Migrations\\20250306180504_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20250306180504_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Services\\MovieService.cs",
+              "RelativeDocumentMoniker": "Services\\MovieService.cs",
+              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Services\\MovieService.cs",
+              "RelativeToolTip": "Services\\MovieService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T18:05:04.784Z"
+              "WhenOpened": "2025-03-09T09:04:50.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T21:22:37.249Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "Controllers\\MoviesController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T21:41:01.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddMovieDto.cs",
+              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Models\\AddMovieDto.cs",
+              "RelativeDocumentMoniker": "Models\\AddMovieDto.cs",
+              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Models\\AddMovieDto.cs",
+              "RelativeToolTip": "Models\\AddMovieDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T22:00:33.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T08:59:47.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "20250306175301_NowaMigracja.cs",
               "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Migrations\\20250306175301_NowaMigracja.cs",
               "RelativeDocumentMoniker": "Migrations\\20250306175301_NowaMigracja.cs",
               "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Migrations\\20250306175301_NowaMigracja.cs",
               "RelativeToolTip": "Migrations\\20250306175301_NowaMigracja.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-06T17:53:02.183Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MovieApp.csproj",
               "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\MovieApp.csproj",
               "RelativeDocumentMoniker": "MovieApp.csproj",
@@ -94,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -106,56 +166,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddMovieDto.cs",
-              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Models\\AddMovieDto.cs",
-              "RelativeDocumentMoniker": "Models\\AddMovieDto.cs",
-              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Models\\AddMovieDto.cs",
-              "RelativeToolTip": "Models\\AddMovieDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T22:00:33.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Movie.cs",
               "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Models\\Entities\\Movie.cs",
               "RelativeDocumentMoniker": "Models\\Entities\\Movie.cs",
               "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Models\\Entities\\Movie.cs",
               "RelativeToolTip": "Models\\Entities\\Movie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T21:58:45.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MoviesController.cs",
-              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Controllers\\MoviesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MoviesController.cs",
-              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Controllers\\MoviesController.cs",
-              "RelativeToolTip": "Controllers\\MoviesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "20250306180504_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Migrations\\20250306180504_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250306180504_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Migrations\\20250306180504_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250306180504_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T21:41:01.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T18:05:04.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T21:22:37.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -167,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "MovieApp.http",
               "DocumentMoniker": "C:\\Users\\emili\\OneDrive\\Pulpit\\MoviesApp\\MovieApp\\MovieApp.http",
               "RelativeDocumentMoniker": "MovieApp.http",

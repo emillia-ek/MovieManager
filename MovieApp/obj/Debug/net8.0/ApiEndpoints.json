@@ -77,5 +77,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieApp.Controllers.MoviesController",
+    "Method": "FetchMoviesFromApi",
+    "RelativePath": "api/Movies/fetch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

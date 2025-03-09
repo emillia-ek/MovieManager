@@ -12,11 +12,26 @@ namespace MovieApp.Controllers
     public class MoviesController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
-        public MoviesController(ApplicationDbContext dbContext)
+        private readonly MovieService movieService;
+        public MoviesController(ApplicationDbContext dbContext, MovieService movieService)
         {
             this.dbContext = dbContext;
+            this.movieService = movieService;
         }
 
+        [HttpPost("fetch")]
+        public async Task<IActionResult> FetchMoviesFromApi()
+        {
+            try
+            {
+                var newMovies = await movieService.PobierzFilmyIZapisz();
+                return Ok(newMovies);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Błąd pobierania filmów: {ex.Message}");
+            }
+        }
 
         [HttpGet]
         public IActionResult GetAllMovies()
