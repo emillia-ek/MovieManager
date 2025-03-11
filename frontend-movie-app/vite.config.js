@@ -18,9 +18,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://localhost:7108',  // The URL of your ASP.NET Core backend
-        changeOrigin: true,               // This is important for handling virtual hosts
-        secure: false,                    // Use false if you are using HTTP instead of HTTPS
+        target: 'http://localhost:5004', 
+        changeOrigin: true,   
+        secure: false,                
       },
     },
   },
