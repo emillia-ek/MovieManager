@@ -1,8 +1,8 @@
 <template>
   <div class="container mt-4">
-    <h1>Movies List</h1>
+    <h1 class="display-3 mt-5">Movies List</h1>
 
-    <!-- Komunikaty o błędach i sukcesach -->
+    <!-- Info about errors and success-->
     <div v-if="errorMessage" class="alert alert-danger" role="alert">
       {{ errorMessage }}
     </div>
@@ -10,13 +10,13 @@
       {{ successMessage }}
     </div>
 
-    <!-- Przycisk do dodania filmu i pobierania -->
+    <!-- Button for adding and downloading movies -->
     <div class="mb-3">
-      <button @click="addNewMovie" class="btn btn-primary">Add Movie</button>
-      <button @click="downloadMovies" class="btn btn-secondary ml-2">Download Movies</button>
+      <button @click="addNewMovie" class="btn btn-primary ">Add Movie</button>
+      <button @click="downloadMovies" class="btn btn-secondary m-4 ">Download Movies</button>
     </div>
 
-    <!-- Tabela filmów -->
+    <!-- Movies table-->
     <table class="table table-hover">
       <thead>
         <tr>
@@ -29,7 +29,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="movie in movies" :key="movie.id">
+        <tr v-for="movie in movies" :key="movie.id" class="align-middle">
           <td>{{ movie.id }}</td>
           <td>{{ movie.title }}</td>
           <td>{{ movie.director }}</td>
@@ -37,13 +37,13 @@
           <td>{{ movie.rate }}</td>
           <td>
             <button @click="editMovie(movie)" class="btn btn-warning btn-sm">Edit</button>
-            <button @click="deleteMovie(movie.id)" class="btn btn-danger btn-sm ml-2">Delete</button>
+            <button @click="deleteMovie(movie.id)" class="btn btn-danger btn-sm m-2 ">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
 
-    <!-- Modal dla edycji i dodawania filmu -->
+    <!-- Modal for edition and adding movies -->
     <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -119,7 +119,7 @@
         year: null
       });
 
-      // zasady walidacji
+      // walidation rules
       const rules = computed(() => ({
         title: { required, maxLength: maxLength(200) },
         year: { required, numeric, minValue: minValue(1900), maxValue: maxValue(2200) }
@@ -149,7 +149,7 @@
           this.movies = response.data;
         } catch (error) {
           console.error("Error fetching movies:", error);
-          this.errorMessage = "Błąd podczas pobierania filmów.";
+          this.errorMessage = "Error downloading movies.";
         }
       },
       openModal() {
@@ -192,11 +192,11 @@
           }
           this.fetchMovies();
           this.closeModal();
-          this.successMessage = "Film zapisano pomyślnie!";
+          this.successMessage = "Movie saved successfully!";
           this.errorMessage = ""; 
         } catch (error) {
           console.error('Error saving movie:', error);
-          this.errorMessage = "Nie udało się zapisać filmu.";
+          this.errorMessage = "Failed to save movie.";
           this.successMessage = "";
         }
       },
@@ -204,18 +204,18 @@
         try {
           const response = await axios.post("/api/Movies/fetch");
 
-          // Sprawdź, czy odpowiedź zawiera nowe filmy
+          // Check if the answer contains new videos
           if (response.data && response.data.length > 0) {
-            this.successMessage = "Filmy zostały pomyślnie pobrane!";
+            this.successMessage = "Movies downloaded successfully!";
             this.errorMessage = ""; 
             await this.fetchMovies();
           } else {
-            this.errorMessage = "Nie można pobrać filmów, brak nowych filmów do pobrania.";
+            this.errorMessage = "Unable to download movies, no new movies to download.";
             this.successMessage = ""; 
           }
         } catch (error) {
           console.error("Error downloading movies:", error);
-          this.errorMessage = "Nie udało się pobrać filmów. Spróbuj ponownie później.";
+          this.errorMessage = "Failed to download movies. Please try again later.";
           this.successMessage = ""; 
         }
       }
