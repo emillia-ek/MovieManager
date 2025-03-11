@@ -45,7 +45,7 @@
 
     <!-- Modal for edition and adding movies -->
     <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="movieModalLabel">{{ isEditMode ? "Edit Movie" : "Add Movie" }}</h5>
@@ -55,7 +55,7 @@
             <!-- Title input -->
             <div class="mb-3">
               <label for="movieTitle" class="form-label">Title:</label>
-              <input type="text" id="movieTitle" class="form-control" v-model="selectedMovie.title" :class="{'is-invalid': v$.title.$error}">
+              <input type="text" id="movieTitle" class="form-control" v-model="selectedMovie.title" :class="{'is-invalid': v$.title.$error}" required>
               <div v-if="v$.title.$error" class="invalid-feedback">
                 Title is required (max 200 characters).
               </div>
@@ -64,13 +64,13 @@
             <!-- Director input -->
             <div class="mb-3">
               <label for="movieDirector" class="form-label">Director:</label>
-              <input type="text" id="movieDirector" class="form-control" v-model="selectedMovie.director">
+              <input type="text" id="movieDirector" class="form-control" v-model="selectedMovie.director" required>
             </div>
 
             <!-- Year input -->
             <div class="mb-3">
               <label for="movieYear" class="form-label">Year:</label>
-              <input type="number" id="movieYear" class="form-control" v-model="selectedMovie.year" :class="{'is-invalid': v$.year.$error}">
+              <input type="number" id="movieYear" class="form-control" v-model="selectedMovie.year" :class="{'is-invalid': v$.year.$error}" required>
               <div v-if="v$.year.$error" class="invalid-feedback">
                 Year must be between 1900 and 2200.
               </div>
@@ -79,13 +79,13 @@
             <!-- Rate input -->
             <div class="mb-3">
               <label for="movieRate" class="form-label">Rate:</label>
-              <input type="number" min=0 max=10 id="movieRate" class="form-control" v-model="selectedMovie.rate">
+              <input type="number" min=0 max=10 id="movieRate" class="form-control" v-model="selectedMovie.rate" required>
             </div>
           </div>
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" @click="closeModal">Cancel</button>
-            <button type="button" class="btn btn-primary" @click="saveMovie">{{ isEditMode ? "Save changes" : "Add Movie" }}</button>
+            <button type="submit" class="btn btn-primary" @click="saveMovie">{{ isEditMode ? "Save changes" : "Add Movie" }}</button>
           </div>
         </div>
       </div>
