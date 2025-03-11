@@ -1,9 +1,7 @@
-# MovieApp - Aplikacja C# + Vue (Vite)
+# MoviesApp - Aplikacja C# + Vue (Vite)
 
 ## Opis projektu
-MovieApp to aplikacja webowa umożliwiająca pobieranie filmów z bazy danych oraz zarządzanie nimi. Użytkownik może dodawać, edytować i usuwać własne filmy, które są przechowywane w lokalnej bazie danych.
-
-Projekt składa się z backendu napisanego w C# (.NET + Entity Framework Core) oraz frontendowej aplikacji w Vue 3 (z Vite), wykorzystującej biblioteki Axios i Vuelidate.
+Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edytowanie i usuwanie własnych filmów. Backend jest oparty na ASP.NET Core z Entity Framework Core, natomiast frontend został zbudowany przy użyciu Vue 3 (Vite), Axios, Vuelidate i Bootstrap.
 
 ## Technologie
 
@@ -25,8 +23,8 @@ Projekt składa się z backendu napisanego w C# (.NET + Entity Framework Core) o
 ### Backend
 1. Klonowanie repozytorium
    ```sh
-   git clone https://github.com/...
-   cd twoje-repozytorium/backend
+   git clone https://github.com/emillia-ek/MoviesApp.git
+   cd MoviesApp/MovieApp
    ```
 2. Przygotowanie bazy danych
    - Jeśli używasz SQL Server:
@@ -35,13 +33,14 @@ Projekt składa się z backendu napisanego w C# (.NET + Entity Framework Core) o
      - Skonfiguruj połączenie w `appsettings.json`
    - Wykonaj migracje i zainicjalizuj bazę:
      ```sh
+     dotnet ef migrations add InitialCreate
      dotnet ef database update
      ```
 3. Uruchomienie API
    ```sh
    dotnet run
    ```
-   API powinno być dostępne pod adresem: `https://localhost:5001`.
+   API powinno być dostępne pod adresem: `http://localhost:5004`.
 
 ### Frontend
 1. Przejdź do katalogu projektu Vue
@@ -51,6 +50,7 @@ Projekt składa się z backendu napisanego w C# (.NET + Entity Framework Core) o
 2. **Zainstaluj zależności
    ```sh
    npm install
+   npm install axios vuelidate bootstrap
    ```
 3. **Uruchomienie aplikacji**
    ```sh
@@ -63,7 +63,6 @@ Projekt składa się z backendu napisanego w C# (.NET + Entity Framework Core) o
 ### Backend:
 - API REST do zarządzania filmami (CRUD: Create, Read, Update, Delete)
 - Entity Framework Core do obsługi bazy danych
-- Możliwość użycia SQLite lub SQL Server
 
 ### Frontend:
 - Pobieranie listy filmów z backendu za pomocą Axios
@@ -76,20 +75,13 @@ Projekt składa się z backendu napisanego w C# (.NET + Entity Framework Core) o
 
 ```
 root/
-│── backend/        # Aplikacja backendowa (C# .NET)
-│── frontend/       # Aplikacja frontendowa (Vue 3 + Vite)
+│── MovieApp/        # Aplikacja backendowa (C# .NET)
+│── frontend-movie-app/       # Aplikacja frontendowa (Vue 3 + Vite)
 │── README.md       # Dokumentacja
 ```
 
 ## API Endpoints
-| Metoda  | Endpoint          | Opis |
-|---------|------------------|------|
-| GET     | `/api/movies`    | Pobiera listę filmów |
-| GET     | `/api/movies/{id}` | Pobiera szczegóły filmu |
-| POST    | `/api/movies`    | Dodaje nowy film |
-| PUT     | `/api/movies/{id}` | Edytuje istniejący film |
-| DELETE  | `/api/movies/{id}` | Usuwa film |
+...
 
-## Autor
 
 
