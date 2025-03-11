@@ -24,7 +24,7 @@ namespace MovieApp.Controllers
         {
             try
             {
-                var newMovies = await movieService.PobierzFilmyIZapisz();
+                var newMovies = await movieService.DownloadAndSaveMovie();
                 return Ok(newMovies);
             }
             catch (Exception ex)
@@ -36,67 +36,117 @@ namespace MovieApp.Controllers
         [HttpGet]
         public IActionResult GetAllMovies()
         {
-            return Ok(dbContext.Movies.ToList());
+            try
+            {
+                var movies = dbContext.Movies.ToList();
+                return Ok(movies);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Błąd serwera", details = ex.Message });
+            }
         }
 
         [HttpGet]
         [Route("{id:int}")]
         public IActionResult GetMovieById(int id)
         {
-            var movie = dbContext.Movies.Find(id);
-            if(movie is null){
-                return NotFound();
+            try
+            {
+                var movie = dbContext.Movies.Find(id);
+                if (movie is null)
+                {
+                    return NotFound(new { message = "Nie znaleziono filmu", id });
+                }
+                return Ok(movie);
             }
-            return Ok(movie);
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Błąd serwera", details = ex.Message });
+            }
         }
 
         [HttpPost]
         public IActionResult AddMovie(AddMovieDto addMovieDto)
         {
-            var movieEntity = new Movie()
+            try
             {
-                Title = addMovieDto.Title,
-                Director = addMovieDto.Director,
-                Year = addMovieDto.Year
-            };
+                if (addMovieDto == null)
+                {
+                    return BadRequest(new { message = "Nieprawidłowe dane wejściowe" });
+                }
 
-            dbContext.Movies.Add(movieEntity);
-            dbContext.SaveChanges();
+                var movieEntity = new Movie
+                {
+                    Title = addMovieDto.Title,
+                    Director = addMovieDto.Director,
+                    Year = addMovieDto.Year,
+                    Rate = addMovieDto.Rate
+                };
 
-            return Ok(movieEntity);
+                dbContext.Movies.Add(movieEntity);
+                dbContext.SaveChanges();
 
+                return CreatedAtAction(nameof(GetMovieById), new { id = movieEntity.Id }, movieEntity);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Błąd serwera", details = ex.Message });
+            }
         }
+
+
         [HttpPut]
         [Route("{id:int}")]
         public IActionResult UpdateMovie(int id, UpdateMovieDto updateMovieDto)
         {
-            var movie = dbContext.Movies.Find(id);
-            if(movie is null)
+            try
             {
-                return NotFound();
-            }
+                var movie = dbContext.Movies.Find(id);
+                if (movie == null)
+                {
+                    return NotFound(new { message = "Film nie znaleziony", id });
+                }
 
-            movie.Title = updateMovieDto.Title;
-            movie.Director = updateMovieDto.Director;
-            movie.Year = updateMovieDto.Year;
-            
-            dbContext.SaveChanges();
-            return Ok(movie);
+                if (updateMovieDto == null)
+                {
+                    return BadRequest(new { message = "Nieprawidłowe dane wejściowe" });
+                }
+
+                movie.Title = updateMovieDto.Title;
+                movie.Director = updateMovieDto.Director;
+                movie.Year = updateMovieDto.Year;
+                movie.Rate = updateMovieDto.Rate;
+
+                dbContext.SaveChanges();
+                return Ok(movie);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Błąd serwera", details = ex.Message });
+            }
         }
 
         [HttpDelete]
         [Route("{id:int}")]
         public IActionResult DeleteMovie(int id)
         {
-            var movie = dbContext.Movies.Find(id);
-            if(movie is null)
+            try
             {
-                return NotFound();
+                var movie = dbContext.Movies.Find(id);
+                if (movie == null)
+                {
+                    return NotFound(new { message = "Film nie znaleziony", id });
+                }
+
+                dbContext.Movies.Remove(movie);
+                dbContext.SaveChanges();
+                return Ok(new { message = "Film został usunięty" });
             }
-            
-            dbContext.Movies.Remove(movie);
-            dbContext.SaveChanges();
-            return Ok();
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Błąd serwera", details = ex.Message });
+            }
         }
     }
 }

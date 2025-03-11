@@ -11,8 +11,8 @@ using MovieApp.Data;
 namespace MovieApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250306180504_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250311124314_AddNewColumnsToMovie")]
+    partial class AddNewColumnsToMovie
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,11 +33,13 @@ namespace MovieApp.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Director")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ExternalId")
                         .HasColumnType("int");
+
+                    b.Property<float>("Rate")
+                        .HasColumnType("real");
 
                     b.Property<string>("Title")
                         .IsRequired()

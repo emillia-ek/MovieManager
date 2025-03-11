@@ -5,7 +5,7 @@
 namespace MovieApp.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class AddNewColumnsToMovie : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,8 +18,9 @@ namespace MovieApp.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ExternalId = table.Column<int>(type: "int", nullable: true),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Director = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Year = table.Column<int>(type: "int", nullable: false)
+                    Director = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Year = table.Column<int>(type: "int", nullable: false),
+                    Rate = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
                 {

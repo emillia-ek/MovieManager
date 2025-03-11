@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MovieApp.Data;
+using MovieApp.Models;
 using MovieApp.Models.Entities;
 
 public class MovieService
@@ -17,7 +18,7 @@ public class MovieService
         this.dbContext = context;
     }
 
-    public async Task<List<Movie>> PobierzFilmyIZapisz()
+    public async Task<List<Movie>> DownloadAndSaveMovie()
     {
         var response = await httpClient.GetAsync("https://filmy.programdemo.pl/MyMovies");
         response.EnsureSuccessStatusCode();
@@ -40,7 +41,8 @@ public class MovieService
                     ExternalId = movieDto.Id,
                     Title = movieDto.Title,
                     Director = movieDto.Director,
-                    Year = movieDto.Year
+                    Year = movieDto.Year,
+                    Rate = movieDto.Rate
                 };
 
                 newMovies.Add(newMovie);

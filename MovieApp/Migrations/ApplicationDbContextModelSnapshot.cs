@@ -30,11 +30,13 @@ namespace MovieApp.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Director")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ExternalId")
                         .HasColumnType("int");
+
+                    b.Property<float>("Rate")
+                        .HasColumnType("real");
 
                     b.Property<string>("Title")
                         .IsRequired()
