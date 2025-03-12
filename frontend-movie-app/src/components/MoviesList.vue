@@ -10,89 +10,8 @@
       <button @click="downloadMovies" class="btn btn-secondary m-4 ">Download Movies</button>
     </div>
 
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Director</th>
-          <th>Year</th>
-          <th>Rate</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr v-if="isLoading">
-          <td colspan="6" class="text-center">
-            <div class="spinner-border text-primary m-5" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr v-else-if="movies.length === 0">
-          <td colspan="6" class="text-center">No movies found.</td>
-        </tr>
-        
-        <tr v-else v-for="movie in movies" :key="movie.id" class="align-middle">
-          <td>{{ movie.id }}</td>
-          <td>{{ movie.title }}</td>
-          <td>{{ movie.director }}</td>
-          <td>{{ movie.year }}</td>
-          <td>{{ movie.rate }}</td>
-          <td>
-            <button @click="editMovie(movie)" class="btn btn-secondary btn-sm">Edit</button>
-            <button @click="deleteMovie(movie.id)" class="btn btn-danger btn-sm m-2">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-
-    </table>
-
-
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">{{ isEditMode ? "Edit Movie" : "Add Movie" }}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" @click="closeModal"></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="movieTitle" class="form-label">Title:</label>
-              <input type="text" id="movieTitle" class="form-control" v-model="selectedMovie.title" :class="{'is-invalid': v$.selectedMovie.title.$error}">
-              <div v-if="v$.selectedMovie.title.$error" class="invalid-feedback">
-                Title is required (max 200 characters).
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="movieDirector" class="form-label">Director:</label>
-              <input type="text" id="movieDirector" class="form-control" v-model="selectedMovie.director">
-            </div>
-
-            <div class="mb-3">
-              <label for="movieYear" class="form-label">Year:</label>
-              <input type="number" id="movieYear" class="form-control" v-model="selectedMovie.year" :class="{'is-invalid': v$.selectedMovie.year.$error}">
-              <div v-if="v$.selectedMovie.year.$error" class="invalid-feedback">
-                Year must be between 1900 and 2200.
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="movieRate" class="form-label">Rate:</label>
-              <input type="number" min=0 max=10 id="movieRate" class="form-control" v-model="selectedMovie.rate" required>
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" data-bs-dismiss="modal" class="btn btn-secondary" @click="closeModal">Cancel</button>
-            <button type="submit" class="btn btn-primary" @click="saveMovie">{{ isEditMode ? "Save changes" : "Add Movie" }}</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <MovieTable :isLoading="isLoading" :movies="movies" @edit-movie = "editMovie" @delete-movie = "deleteMovie"/>
+    <MovieModal :selectedMovie="selectedMovie" :isEditMode="isEditMode" :v$="v$" @save-movie="saveMovie" close-modal="closeModal"/>
   </div>
 
 </template>
@@ -100,13 +19,17 @@
 <script>
   import axios from "axios";
   import { ref, computed } from "vue";
-  import useVuelidate from "@vuelidate/core";
-  import { required, minValue, maxValue, maxLength, numeric } from "@vuelidate/validators";
   import { Modal } from 'bootstrap';
   
+  import useVuelidate from "@vuelidate/core";
+  import { required, minValue, maxValue, maxLength, numeric } from "@vuelidate/validators";
+  
   import Alert from './Alert.vue';
+  import MovieTable from './Movie-table.vue';
+  import MovieModal from './Modal.vue';
 
   export default {
+
     data() {
       return {
         isEditMode: false,
@@ -234,7 +157,9 @@
       }
     },
     components: {
-      Alert
+      Alert,
+      MovieTable,
+      MovieModal
     }
   };
 </script>
