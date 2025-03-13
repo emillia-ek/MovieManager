@@ -75,13 +75,11 @@ Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edyt
 
 ```
 root/
-│── MovieApp/        # Aplikacja backendowa (C# .NET)
+│── MovieApp/                 # Aplikacja backendowa (C# .NET)
 │── frontend-movie-app/       # Aplikacja frontendowa (Vue 3 + Vite)
-│── README.md       # Dokumentacja
+│── README.md                 # Dokumentacja
 ```
 
-## API Endpoints
-...
 
 
 
