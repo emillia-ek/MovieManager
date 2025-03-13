@@ -17,6 +17,7 @@ Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edyt
 - Axios (do komunikacji z API)
 - Vuelidate (do walidacji formularzy)
 - NPM (do zarządzania zależnościami)
+- Bootstrap (framework CSS)
 
 ## Instalacja i uruchomienie
 
