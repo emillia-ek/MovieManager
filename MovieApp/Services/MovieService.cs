@@ -32,7 +32,6 @@ public class MovieService
 
         foreach (var movieDto in moviesFromApi)
         {
-            // ORM - Sprawdzamy, czy film już istnieje w bazie na podstawie ExternalId
             var existingMovie = await dbContext.Movies.FirstOrDefaultAsync(m => m.ExternalId == movieDto.Id);
             if (existingMovie == null)
             {
