@@ -6,10 +6,10 @@ Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edyt
 ## Technologie
 
 ### Backend (C# .NET)
-- .NET 7 / .NET 8
+- .NET 8
 - Entity Framework Core
 - ASP.NET Web API
-- SQL Server / SQLite (do wyboru)
+- SQL Server
 
 ### Frontend (Vue 3 + Vite)
 - Vue 3
@@ -40,7 +40,7 @@ Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edyt
    ```sh
    dotnet run
    ```
-   API powinno być dostępne pod adresem: `http://localhost:5004`.
+   Domyślnie API będzie dostępne pod adresem `https://localhost:7108`. Jeśli API nie jest dostępne pod tym adresem, upewnij się, że odpowiednio skonfigurowałeś port w pliku appsettings.json. 
 
 ### Frontend
 1. Przejdź do katalogu projektu Vue
@@ -56,7 +56,7 @@ Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edyt
    ```sh
    npm run dev
    ```
-   Aplikacja będzie działać pod adresem `http://localhost:5173/`.
+   Aplikacja frontendowa domyślnie jest dostępna pod adresem `http://localhost:5173/`. Jeśli aplikacja nie jest dostępna pod tym adresem, upewnij się, że odpowiednio skonfigurowałeś port w pliku vite.config.js.
 
 ## Funkcjonalności
 
