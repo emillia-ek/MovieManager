@@ -11,8 +11,8 @@ using MovieApp.Data;
 namespace MovieApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250311124314_AddNewColumnsToMovie")]
-    partial class AddNewColumnsToMovie
+    [Migration("20250313110931_AddNewTable")]
+    partial class AddNewTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,14 +38,14 @@ namespace MovieApp.Migrations
                     b.Property<int?>("ExternalId")
                         .HasColumnType("int");
 
-                    b.Property<float>("Rate")
+                    b.Property<float?>("Rate")
                         .HasColumnType("real");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Year")
+                    b.Property<int?>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

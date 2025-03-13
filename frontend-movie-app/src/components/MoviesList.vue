@@ -11,7 +11,7 @@
     </div>
 
     <MovieTable :isLoading="isLoading" :movies="movies" @edit-movie = "editMovie" @delete-movie = "deleteMovie"/>
-    <MovieModal :selectedMovie="selectedMovie" :isEditMode="isEditMode" :v$="v$" @save-movie="saveMovie" close-modal="closeModal"/>
+    <MovieModal :selectedMovie="selectedMovie" :isEditMode="isEditMode" @save-movie="saveMovie" close-modal="closeModal"/>
   </div>
 
 </template>
@@ -20,16 +20,14 @@
   import axios from "axios";
   import { ref, computed } from "vue";
   import { Modal } from 'bootstrap';
-  
-  import useVuelidate from "@vuelidate/core";
-  import { required, minValue, maxValue, maxLength, numeric } from "@vuelidate/validators";
+
   
   import Alert from './Alert.vue';
   import MovieTable from './Movie-table.vue';
   import MovieModal from './Modal.vue';
-
+  import { fetchMovies, addNewMovie, deleteMovie, updateMovie } from "@/services/movies.js";
+  
   export default {
-
     data() {
       return {
         isEditMode: false,
@@ -41,15 +39,7 @@
         successMessage: "",
       };
     },
-    setup() {return {v$: useVuelidate() }},
-    validations(){
-      return{
-        selectedMovie: {
-          title: {required, maxLength: maxLength(200),},
-          year: {numeric, minValue: minValue(1900), maxValue: maxValue(2200),}
-        }
-      }
-    },
+    
     async mounted() {
       const modalElement = document.getElementById('staticBackdrop');
       if (modalElement) {
@@ -63,12 +53,12 @@
       async fetchMovies() {
         try {
           this.isLoading = true;
-          const response = await axios.get("/api/Movies");
-          this.movies = response.data;
+          this.movies = await fetchMovies();
           this.isLoading = false;
         } catch (error) {
           console.error("Error fetching movies:", error);
           this.errorMessage = "Error downloading movies.";
+          this.successMessage = "";
           this.isLoading = false;
         }
       },
@@ -86,21 +76,22 @@
         try{
           this.isEditMode = false;
           this.selectedMovie = { title: '', director: '', year: '', rate: '' };
-          this.v$.$reset();
           this.openModal();
         }catch (error) {
           console.error("Error adding movies:", error);
           this.errorMessage = "Error adding movie.";
+          this.successMessage = "";
         }
       },
       async deleteMovie(id) {
         if (confirm('Do you want to delete this movie?')) {
           try{
-            await axios.delete(`/api/Movies/${id}`);
+            await deleteMovie(id);
             await this.fetchMovies();
           }catch (error) {
             console.error("Error fetching movies:", error);
             this.errorMessage = "Error deleting movie.";
+            this.successMessage = "";
           }
         }
       },
@@ -108,22 +99,22 @@
         try{
           this.selectedMovie = { ...movie };
           this.isEditMode = true;
-          this.v$.$reset();
           this.openModal();
         }catch (error) {
           console.error("Error editing movies:", error);
           this.errorMessage = "Error editing movie.";
+          this.successMessage = "";
         }
       },
       async saveMovie() {
-        const isValid = await this.v$.$validate();
-        if (!isValid) return;
-
+        this.selectedMovie.rate == ''? this.selectedMovie.rate = null : this.selectedMovie.rate;
+        this.selectedMovie.year == ''? this.selectedMovie.year = null : this.selectedMovie.year;
+        
         try {
           if (this.isEditMode) {
-            await axios.put(`/api/Movies/${this.selectedMovie.id}`, this.selectedMovie);
+            await updateMovie(this.selectedMovie);
           } else {
-            await axios.post("/api/Movies", this.selectedMovie);
+            await addNewMovie(this.selectedMovie);
           }
           this.fetchMovies();
           this.closeModal();
@@ -139,20 +130,24 @@
       },
       async downloadMovies() {
         try {
+          this.isLoading = true;
           const response = await axios.post("/api/Movies/fetch");
 
           if (response?.data?.length > 0) {
             this.successMessage = "Movies downloaded successfully!";
             this.errorMessage = ""; 
             await this.fetchMovies();
+            this.isLoading = false;
           } else {
             this.errorMessage = "Unable to download movies, no new movies to download.";
             this.successMessage = ""; 
+            this.isLoading = false;
           }
         } catch (error) {
           console.error("Error downloading movies:", error);
           this.errorMessage = "Failed to download movies. Please try again later.";
           this.successMessage = ""; 
+          this.isLoading = false;
         }
       }
     },
@@ -165,4 +160,3 @@
 </script>
 
     
-
