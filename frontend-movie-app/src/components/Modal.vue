@@ -24,7 +24,7 @@
             <label for="movieYear" class="form-label">Year:</label>
             <input type="number" id="movieYear" class="form-control" v-model="selectedMovie.year" :class="{'is-invalid': v$.selectedMovie.year.$error}">
             <div v-if="v$.selectedMovie.year.$error" class="invalid-feedback">
-              Year is required and must be between 1900 and 2200.
+              Year must be between 1900 and 2200.
             </div>
           </div>
 
