@@ -1,4 +1,4 @@
-# FilmManager - Aplikacja C# + Vue (Vite)
+# MovieManager - Aplikacja C# + Vue (Vite)
 
 ## Opis projektu
 Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edytowanie i usuwanie własnych filmów. Backend jest oparty na ASP.NET Core z Entity Framework Core, natomiast frontend został zbudowany przy użyciu Vue 3 (Vite), Axios, Vuelidate i Bootstrap.
@@ -24,8 +24,8 @@ Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edyt
 ### Backend
 1. Klonowanie repozytorium
    ```sh
-   git clone https://github.com/emillia-ek/FilmManager.git
-   cd FilmManager/MovieApp
+   git clone https://github.com/emillia-ek/MovieManager.git
+   cd MovieManager/MovieApp
    ```
 2. Przygotowanie bazy danych
    - Jeśli używasz SQL Server:
