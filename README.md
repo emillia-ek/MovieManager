@@ -1,78 +1,116 @@
-# MovieManager - Aplikacja C# + Vue (Vite)
+# 🎬 MovieManager - Aplikacja C# + Vue (Vite)
 
-## Opis projektu
-Aplikacja umożliwia pobieranie listy filmów z bazy danych oraz dodawanie, edytowanie i usuwanie własnych filmów. Backend jest oparty na ASP.NET Core z Entity Framework Core, natomiast frontend został zbudowany przy użyciu Vue 3 (Vite), Axios, Vuelidate i Bootstrap.
+![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)  
+![Vue.js](https://img.shields.io/badge/Vue.js-3-42b883?logo=vue.js&logoColor=white)  
+![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite&logoColor=white)  
+![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-CC2927?logo=microsoftsqlserver&logoColor=white)  
+![Bootstrap](https://img.shields.io/badge/Bootstrap-Frontend-7952B3?logo=bootstrap&logoColor=white)  
 
-## Technologie
+> **MovieManager** to aplikacja webowa umożliwiająca zarządzanie listą filmów – pobieranie z bazy danych oraz dodawanie, edytowanie i usuwanie własnych pozycji.  
+> Backend oparty na **ASP.NET Core + Entity Framework Core**, a frontend na **Vue 3 (Vite) + Axios + Vuelidate + Bootstrap**.
 
-### Backend (C# .NET)
-- .NET 8
-- Entity Framework Core
-- ASP.NET Web API
-- SQL Server
+---
 
-### Frontend (Vue 3 + Vite)
-- Vue 3
-- Vite
-- Axios (do komunikacji z API)
-- Vuelidate (do walidacji formularzy)
-- NPM (do zarządzania zależnościami)
-- Bootstrap (framework CSS)
+## 📑 Spis treści
+- [🚀 Opis projektu](#-opis-projektu)  
+- [🛠 Technologie](#-technologie)  
+  - [Backend (C# .NET)](#-backend-c-net)  
+  - [Frontend (Vue 3 + Vite)](#-frontend-vue-3--vite)  
+- [⚡ Instalacja i uruchomienie](#-instalacja-i-uruchomienie)  
+  - [Backend](#-backend)  
+  - [Frontend](#-frontend)  
+- [✨ Funkcjonalności](#-funkcjonalności)  
+- [📂 Struktura projektu](#-struktura-projektu)  
 
-## Instalacja i uruchomienie
+---
 
-### Backend
+## 🚀 Opis projektu
+Aplikacja umożliwia:
+- Pobieranie listy filmów z bazy danych  
+- Dodawanie, edytowanie i usuwanie własnych filmów  
+- Walidację formularzy po stronie frontendu  
+
+---
+
+## 🛠 Technologie
+
+### 🔹 Backend (C# .NET)
+- .NET 8  
+- Entity Framework Core  
+- ASP.NET Web API  
+- SQL Server / SQLite  
+
+### 🔹 Frontend (Vue 3 + Vite)
+- Vue 3  
+- Vite  
+- Axios (komunikacja z API)  
+- Vuelidate (walidacja formularzy)  
+- Bootstrap (framework CSS)  
+- NPM (zarządzanie zależnościami)  
+
+---
+
+## ⚡ Instalacja i uruchomienie
+
+### 🖥 Backend
 1. Klonowanie repozytorium
    ```sh
-   git clone https://github.com/emillia-ek/MovieManager.git
+   git clone https://github.com/emillia-ek/MovieManager.git  
    cd MovieManager/MovieApp
    ```
-2. Przygotowanie bazy danych
-   - Jeśli używasz SQL Server:
-     - Skonfiguruj połączenie w `appsettings.json`
-   - Jeśli używasz SQLite:
-     - Skonfiguruj połączenie w `appsettings.json`
-   - Wykonaj migracje i zainicjalizuj bazę:
+
+2. Przygotowanie bazy danych  
+   - Skonfiguruj połączenie w `appsettings.json` (SQL Server lub SQLite).  
+   - Wykonaj migracje:
      ```sh
-     dotnet ef migrations add InitialCreate
+     dotnet ef migrations add InitialCreate  
      dotnet ef database update
      ```
+
 3. Uruchomienie API
    ```sh
    dotnet run
    ```
-   Domyślnie API będzie dostępne pod adresem `https://localhost:7108`. Jeśli API nie jest dostępne pod tym adresem, upewnij się, że odpowiednio skonfigurowałeś port w pliku appsettings.json. 
+   Domyślnie: https://localhost:7108  
 
-### Frontend
+---
+
+### 🌐 Frontend
 1. Przejdź do katalogu projektu Vue
-   ```sh
+   ```sh 
    cd ../frontend-movie-app
    ```
-2. **Zainstaluj zależności
+
+2. Instalacja zależności
    ```sh
-   npm install
+   npm install  
    npm install axios vuelidate bootstrap
    ```
-3. **Uruchomienie aplikacji**
+
+3. Uruchomienie aplikacji  
    ```sh
-   npm run dev
+   npm run dev  
+   Domyślnie: http://localhost:5173/
    ```
-   Aplikacja frontendowa domyślnie jest dostępna pod adresem `http://localhost:5173/`. Jeśli aplikacja nie jest dostępna pod tym adresem, upewnij się, że odpowiednio skonfigurowałeś port w pliku vite.config.js.
 
-## Funkcjonalności
+---
 
-### Backend:
-- API REST do zarządzania filmami (CRUD: Create, Read, Update, Delete)
-- Entity Framework Core do obsługi bazy danych
+## ✨ Funkcjonalności
 
-### Frontend:
-- Pobieranie listy filmów z backendu za pomocą Axios
-- Dodawanie nowych filmów (formularz z walidacją Vuelidate)
-- Edytowanie istniejących filmów
-- Usuwanie filmów
-- Dynamiczne odświeżanie listy filmów
+### 🔹 Backend:
+- API REST do zarządzania filmami (CRUD)  
+- Entity Framework Core do obsługi bazy danych  
 
-## Struktura projektu
+### 🔹 Frontend:
+- Pobieranie listy filmów z backendu (Axios)  
+- Dodawanie nowych filmów (formularz z walidacją Vuelidate)  
+- Edytowanie istniejących filmów  
+- Usuwanie filmów  
+- Dynamiczne odświeżanie listy filmów  
+
+---
+
+## 📂 Struktura projektu
 
 ```
 root/
@@ -80,7 +118,6 @@ root/
 │── frontend-movie-app/       # Aplikacja frontendowa (Vue 3 + Vite)
 │── README.md                 # Dokumentacja
 ```
+---
 
-
-
-
+## ⬆️ [Powrót do góry](#-moviemanager---aplikacja-c--vue-vite)
