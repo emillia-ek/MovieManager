@@ -1,11 +1,5 @@
 # 🎬 MovieManager - Aplikacja C# + Vue (Vite)
 
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)  
-![Vue.js](https://img.shields.io/badge/Vue.js-3-42b883?logo=vue.js&logoColor=white)  
-![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite&logoColor=white)  
-![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-CC2927?logo=microsoftsqlserver&logoColor=white)  
-![Bootstrap](https://img.shields.io/badge/Bootstrap-Frontend-7952B3?logo=bootstrap&logoColor=white)  
-
 > **MovieManager** to aplikacja webowa umożliwiająca zarządzanie listą filmów – pobieranie z bazy danych oraz dodawanie, edytowanie i usuwanie własnych pozycji.  
 > Backend oparty na **ASP.NET Core + Entity Framework Core**, a frontend na **Vue 3 (Vite) + Axios + Vuelidate + Bootstrap**.
 
@@ -120,4 +114,4 @@ root/
 ```
 ---
 
-## ⬆️ [Powrót do góry](#-moviemanager---aplikacja-c--vue-vite)
+⬆️ [Powrót do góry](#-moviemanager---aplikacja-c--vue-vite)
