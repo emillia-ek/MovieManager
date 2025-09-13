@@ -86,7 +86,9 @@ Aplikacja umożliwia:
    npm run dev  
    Domyślnie: http://localhost:5173/
    ```
-Aplikacja frontendowa domyślnie jest dostępna pod adresem http://localhost:5173/. Jeśli aplikacja nie jest dostępna pod tym adresem, upewnij się, że odpowiednio skonfigurowałeś port w pliku `vite.config.js`.
+   
+  Aplikacja frontendowa domyślnie jest dostępna pod adresem http://localhost:5173/. Jeśli aplikacja nie jest dostępna pod tym adresem, upewnij się, że odpowiednio skonfigurowałeś port w pliku vite.config.js..
+  
 ---
 
 ## ✨ Funkcjonalności
