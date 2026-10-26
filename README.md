@@ -102,3 +102,11 @@ root/
 │── README.md                 # Dokumentacja
 ```
 ---
+
+## Zrzuty ekranu
+<img width="3224" height="2153" alt="movie1" src="https://github.com/user-attachments/assets/d4ef654d-a7fb-4798-b608-134569ca6334" />
+<img width="1470" height="904" alt="movie2" src="https://github.com/user-attachments/assets/0a000d46-b976-4305-894e-ce64acba741c" />
+<img width="1470" height="907" alt="movie3" src="https://github.com/user-attachments/assets/1081fc51-3ae7-40d1-947e-bdf41d7afc2d" />
+<img width="1470" height="879" alt="movie4" src="https://github.com/user-attachments/assets/b0670666-b0c0-4052-a61e-a5ca01702089" />
+<img width="1470" height="693" alt="movie5" src="https://github.com/user-attachments/assets/b3508bc9-07f1-4a28-b7e4-6ac9b95a6f46" />
+
