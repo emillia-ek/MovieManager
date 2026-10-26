@@ -1,24 +1,11 @@
-# 🎬 MovieManager - Aplikacja C# + Vue (Vite)
+# MovieManager - Aplikacja C# + Vue (Vite)
 
 > **MovieManager** to aplikacja webowa umożliwiająca zarządzanie listą filmów – pobieranie z bazy danych oraz dodawanie, edytowanie i usuwanie własnych pozycji.  
 > Backend oparty na **ASP.NET Core + Entity Framework Core**, a frontend na **Vue 3 (Vite) + Axios + Vuelidate + Bootstrap**.
 
 ---
 
-## 📑 Spis treści
-- [🚀 Opis projektu](#-opis-projektu)  
-- [🛠 Technologie](#-technologie)  
-  - [Backend (C# .NET)](#-backend-c-net)  
-  - [Frontend (Vue 3 + Vite)](#-frontend-vue-3--vite)  
-- [⚡ Instalacja i uruchomienie](#-instalacja-i-uruchomienie)  
-  - [Backend](#-backend)  
-  - [Frontend](#-frontend)  
-- [✨ Funkcjonalności](#-funkcjonalności)  
-- [📂 Struktura projektu](#-struktura-projektu)  
-
----
-
-## 🚀 Opis projektu
+## Opis projektu
 Aplikacja umożliwia:
 - Pobieranie listy filmów z bazy danych  
 - Dodawanie, edytowanie i usuwanie własnych filmów  
@@ -26,15 +13,15 @@ Aplikacja umożliwia:
 
 ---
 
-## 🛠 Technologie
+## Technologie
 
-### 🔹 Backend (C# .NET)
+### Backend (C# .NET)
 - .NET 8  
 - Entity Framework Core  
 - ASP.NET Web API  
 - SQL Server / SQLite  
 
-### 🔹 Frontend (Vue 3 + Vite)
+### Frontend (Vue 3 + Vite)
 - Vue 3  
 - Vite  
 - Axios (komunikacja z API)  
@@ -44,9 +31,9 @@ Aplikacja umożliwia:
 
 ---
 
-## ⚡ Instalacja i uruchomienie
+## Instalacja i uruchomienie
 
-### 🖥 Backend
+### Backend
 1. Klonowanie repozytorium
    ```sh
    git clone https://github.com/emillia-ek/MovieManager.git  
@@ -69,7 +56,7 @@ Aplikacja umożliwia:
 
 ---
 
-### 🌐 Frontend
+### Frontend
 1. Przejdź do katalogu projektu Vue
    ```sh 
    cd ../frontend-movie-app
@@ -91,13 +78,13 @@ Aplikacja umożliwia:
   
 ---
 
-## ✨ Funkcjonalności
+## Funkcjonalności
 
-### 🔹 Backend:
+### Backend:
 - API REST do zarządzania filmami (CRUD)  
 - Entity Framework Core do obsługi bazy danych  
 
-### 🔹 Frontend:
+### Frontend:
 - Pobieranie listy filmów z backendu (Axios)  
 - Dodawanie nowych filmów (formularz z walidacją Vuelidate)  
 - Edytowanie istniejących filmów  
@@ -106,7 +93,7 @@ Aplikacja umożliwia:
 
 ---
 
-## 📂 Struktura projektu
+## Struktura projektu
 
 ```
 root/
@@ -115,5 +102,3 @@ root/
 │── README.md                 # Dokumentacja
 ```
 ---
-
-⬆️ [Powrót do góry](#-moviemanager---aplikacja-c--vue-vite)
